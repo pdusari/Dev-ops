@@ -1,74 +1,224 @@
-<!-- Default home page -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
-<style>
-  /* Styles included inline since you'll probably be deleting this page anyway */
-  html,body{text-align:left;font-size:1em}html,body,img,form,textarea,input,fieldset,div,p,div,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,code{margin:0;padding:0}ul,li{list-style:none}img{display:block}a img{border:0}a{text-decoration:none;font-weight:normal;font-family:inherit}*:active,*:focus{outline:0;-moz-outline-style:none}h1,h2,h3,h4,h5,h6{font-weight:normal}div.clear{clear:both}.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden}body{font-family:"Open Sans",Arial,sans-serif;font-weight:300;}.top-bar {width: 100%; background-color: #e4f0f1; padding: 15px 0;}.top-bar .container img {float: left;}.top-bar .container ul {float: right; padding-top: 25px;}.top-bar .container li {float: left; width: 125px; text-align: center; font-size: 15px; color:#000; font-weight: 600;}.top-bar .container a li:hover {color: #118798; -webkit-transition:color 200ms; -moz-transition:color 200ms; -o-transition:color 200ms;transition:color 200ms;}.container{width: 80%; max-width: 1200px; margin: auto;}div.header {-webkit-transition: 6s; -moz-transition: 6s; -o-transition: 6s;transition: 6s; background: rgba(4, 36, 41, 0.89) url(http://sailsjs.org/images/img_sailsShadow.png) no-repeat 42% bottom; padding: 100px 0 65px;}.header h1#main-title{color: #fff; font-weight: 300; font-size: 2.5em;}.header h3{color: #b1eef7; font-style: italic; font-weight: 300;}.header h3 code{font-style: normal!important; background-color: rgba(255,255,255,0.5); font-weight: 300; color:#0e6471; margin: 0px 5px;}div.main.container{padding: 50px 0;}h1 {color: #118798; font-weight: 300;}code {font-size: inherit; font-family: 'Consolas', 'Monaco', monospace; padding:4px 5px 1px; background-color: #f3f5f7}a{color: #118798; font-weight: 300; text-decoration: underline;}a:hover {color: #0e6471; -webkit-transition:color 200ms; -moz-transition:color 200ms; -o-transition:color 200ms;transition:color 200ms;}p{line-height: 1.5em;}blockquote{background-color: #e4f0f1; padding: 25px; line-height: 1.5em; margin: 15px 0;}blockquote span{font-weight: 600; padding-right: 5px;}ul.getting-started{padding: 25px 75px 25px 0; width: 70%; float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}ul.getting-started li{padding: 25px 0;}ul.getting-started li h3 {padding-bottom: 10px; font-size: 25px; font-weight: 300;}.sprite{background:url(http://sailsjs.org/images/newapp.sprite.png) no-repeat; position: absolute; left: 0; top:0;}.getting-started .sprite{margin-left:10px;padding-left:60px;height:42px;width:0; float: left;}.getting-started .one{background-position:0 0}.getting-started .two{background-position:0 -42px}.getting-started .three{background-position:0 -83px}div.step {position: relative; padding-left: 70px; opacity: 0.9;}div.step:hover{ opacity: 1;}div.links {float: left; width: 30%; max-width: 325px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #f3f5f7; border: 1px solid #ebebeb; padding: 25px 45px 35px;}div.links h3 {color: #727272; text-align: center; font-size: 28px; font-weight: 300;}div.links h4 {color: #727272; font-size: 17px; font-weight: 600; padding: 15px 0 10px;}div.links .link-list a {text-decoration: none; font-weight: 400;}div.links .link-list a li {padding: 0px 0px 5px 10px;}div.default-page{min-width: 1200px;}.pocket{display:none;}
-</style>
-<script type="text/javascript">
-setTimeout(function sunrise () {
-  document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
-}, 0);
-</script>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-<div class="default-page">
-  <div class="header">
-    <h1 id="main-title" class="container"><%= __('A brand new app.') %></h1>
-    <h3 class="container">You're looking at: <code><%= view.pathFromApp + '.' +view.ext %></code></h3>
-  </div>
-  <div class="main container clearfix">
-    <!-- <h1>Getting started</h1>
-    <p>Don't worry, we've got your back.</p> -->
-    <ul class="getting-started">
-      <li class="clearfix">
-        <div class="step">
-          <div class="sprite one"></div>
-          <h3>Generate a REST API.</h3>
-          <p>
-            Run <code>sails generate api user</code>.  This will create two files: a <a href="http://sailsjs.org/#!/documentation/concepts/ORM/Models.html">model</a> <code class="pocket">api/models/User.js</code> and a <a href="http://sailsjs.org/#!/documentation/concepts/Controllers">controller</a><code class="pocket">api/controllers/UserController.js</code>.
-          </p>
-        </div>
-      </li>
-      <li class="clearfix">
-        <div class="step">
-          <div class="sprite two"></div>
-          <h3>
-            Lift your app.
-          </h3>
-          <p>
-            Run <code>sails lift</code> to start up your app server.  If you visit <a target="_blank" href="http://localhost:<%= sails.config.port || 1337%>/user"><code>http://localhost:<%= sails.config.port || 1337%>/user</code></a> in your browser, you'll see a <a href="http://sailsjs.org/#!/documentation/reference/blueprint-api">WebSocket-compatible</a> user API.
-          </p>
-        </div>
-      </li>
-      <li class="clearfix">
-        <div class="step">
-          <div class="sprite three"></div>
-          <h3>
-            Dive in.
-          </h3>
-          <p>Blueprints are just the beginning.  You'll probably also want to learn how to customize your app's <a href="http://sailsjs.org/#!/documentation/concepts/Routes">routes</a>, set up <a href="http://sailsjs.org/#!/documentation/concepts/Policies">security policies</a>, configure your <a href="http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.connections.html">data sources</a>, and build custom <a target="_blank" href="http://sailsjs.org/#!/documentation/concepts/Controllers?q=actions">controller actions</a>. For more help getting started, check out the links on this page.</p>
-
-        </div>
-      </li>
-    </ul>
-    <div class="links">
-      <!-- <h3>Links</h3> -->
-      <ul class="link-list">
-
-        <h4>Docs</h4>
-        <a target="_blank" href="http://sailsjs.org/#!/documentation/anatomy/myApp"><li>App Structure</li></a>
-        <a target="_blank" href="http://sailsjs.org/#!/documentation/reference"><li>Reference</li></a>
-        <a target="_blank" href="http://sailsjs.org/#!/documentation/concepts/extending-sails/Adapters/adapterList.html"><li>Supported Databases</li></a>
-
-        <h4>Tutorials</h4>
-        <a target="_blank" href="https://github.com/sails101"><li>Sails 101</li></a>
-
-        <h4>Community</h4>
-        <a target="_blank" href="http://stackoverflow.com/search?q=sails.js"><li>StackOverFlow</li></a>
-        <a target="_blank" href="https://github.com/balderdashy/sails"><li>GitHub</li></a>
-        <a target="_blank" href="https://groups.google.com/forum/#!forum/sailsjs"><li>Google Group</li></a>
-        <a target="_blank" href="http://webchat.freenode.net/"><li>IRC (#sailsjs on freenode)</li></a>
-
-      </ul>
+  <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__header-row">
+      <span class="android-title mdl-layout-title">
+        <img class="android-logo-image" src="images/android-logo.png">
+      </span>
+      <!-- Add spacer, to align navigation to the right in desktop -->
+      <div class="android-header-spacer mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <div class="android-navigation-container">
+        <nav class="android-navigation mdl-navigation">
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#overview">Overview</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#fourPillers">Four pillars</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#devopsCycle">Devops Cycle</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#toolsUsed">Tools used</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#industries">Industries</a>
+        </nav>
+      </div>
     </div>
+  </div>
+
+  <div class="android-content mdl-layout__content">
+    <a name="overview"></a>
+    <div class="android-be-together-section mdl-typography--text-center">
+      <div class="logo-font android-slogan">be together. not the same.</div>
+      <div class="logo-font android-sub-slogan">welcome to android... be yourself. do your thing. see what's going on.</div>
+    </div>
+    <a name="fourPillers"></a>
+    <div class="android-screen-section mdl-typography--text-center">
+      <div class="mdl-typography--display-1-color-contrast">Powering screens of all sizes</div>
+      <div class="android-screens">
+        <div class="android-wear android-screen">
+          <a class="android-image-link" href="">
+            <img class="android-screen-image" src="images/wear-silver-on.png">
+            <img class="android-screen-image" src="images/wear-black-on.png">
+          </a>
+          <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Android Wear</a>
+        </div>
+        <div class="android-phone android-screen">
+          <a class="android-image-link" href="">
+            <img class="android-screen-image" src="images/nexus6-on.jpg">
+          </a>
+          <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Phones</a>
+        </div>
+        <div class="android-tablet android-screen">
+          <a class="android-image-link" href="">
+            <img class="android-screen-image" src="images/nexus9-on.jpg">
+          </a>
+          <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Tablets</a>
+        </div>
+        <div class="android-tv android-screen">
+          <a class="android-image-link" href="">
+            <img class="android-screen-image" src="images/tv-on.jpg">
+          </a>
+          <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Android TV</a>
+        </div>
+        <div class="android-auto android-screen">
+          <a class="android-image-link" href="">
+            <img class="android-screen-image" src="images/auto-on.jpg">
+          </a>
+          <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase mdl-typography--text-left" href="">Coming Soon: Android Auto</a>
+        </div>
+      </div>
+    </div>
+    <div class="android-wear-section">
+      <a name="devopsCycle"></a>
+      <div class="android-wear-band">
+        <div class="android-wear-band-text">
+          <div class="mdl-typography--display-2 mdl-typography--font-thin">The best of Google built in</div>
+          <p class="mdl-typography--headline mdl-typography--font-thin">
+            Android works perfectly with your favourite apps like Google Maps, Calendar and YouTube.
+          </p>
+          <p>
+            <a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="">
+              See what's new in the Play Store&nbsp;
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="android-customized-section">
+      <a name="toolsUsed"></a>
+      <div class="android-customized-section-text">
+        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Customised by you, for you</div>
+        <p class="mdl-typography--font-light">
+          Put the stuff that you care about right on your home screen: the latest news, the weather or a stream of your recent photos.
+          <br>
+          <a href="" class="android-link mdl-typography--font-light">Customise your phone</a>
+        </p>
+      </div>
+      <div class="android-customized-section-image"></div>
+    </div>
+    <a name="industries"></a>
+    <div class="android-more-section">
+      <div class="android-section-title mdl-typography--display-1-color-contrast">More from Android</div>
+      <div class="android-card-container mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+          <div class="mdl-card__media">
+            <img src="images/more-from-1.png">
+          </div>
+          <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Get going on Android</h4>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <span class="mdl-typography--font-light mdl-typography--subhead">Four tips to make your switch to Android quick and easy</span>
+          </div>
+          <div class="mdl-card__actions">
+            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+              Make the switch
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+          <div class="mdl-card__media">
+            <img src="images/more-from-4.png">
+          </div>
+          <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Create your own Android character</h4>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <span class="mdl-typography--font-light mdl-typography--subhead">Turn the little green Android mascot into you, your friends, anyone!</span>
+          </div>
+          <div class="mdl-card__actions">
+            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+              androidify.com
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+          <div class="mdl-card__media">
+            <img src="images/more-from-2.png">
+          </div>
+          <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Get a clean customisable home screen</h4>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <span class="mdl-typography--font-light mdl-typography--subhead">A clean, simple, customisable home screen that comes with the power of Google Now: Traffic alerts, weather and
+              much more, just a swipe away.</span>
+          </div>
+          <div class="mdl-card__actions">
+            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+              Download now
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+          <div class="mdl-card__media">
+            <img src="images/more-from-3.png">
+          </div>
+          <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Millions to choose from</h4>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your
+              Android device uniquely yours.</span>
+          </div>
+          <div class="mdl-card__actions">
+            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+              Find apps
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="android-footer mdl-mega-footer">
+      <div class="mdl-mega-footer--top-section">
+        <div class="mdl-mega-footer--left-section">
+          <button class="mdl-mega-footer--social-btn"></button>
+          &nbsp;
+          <button class="mdl-mega-footer--social-btn"></button>
+          &nbsp;
+          <button class="mdl-mega-footer--social-btn"></button>
+        </div>
+        <div class="mdl-mega-footer--right-section">
+          <a class="mdl-typography--font-light" href="#overview">
+            Back to Top
+            <i class="material-icons">expand_less</i>
+          </a>
+        </div>
+      </div>
+
+      <div class="mdl-mega-footer--middle-section">
+        <p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
+        <p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
+      </div>
+
+      <div class="mdl-mega-footer--bottom-section">
+        <a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
+          Versions
+          <i class="material-icons">arrow_drop_up</i>
+        </a>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+          <li class="mdl-menu__item">5.0 Lollipop</li>
+          <li class="mdl-menu__item">4.4 KitKat</li>
+          <li class="mdl-menu__item">4.3 Jelly Bean</li>
+          <li class="mdl-menu__item">Android History</li>
+        </ul>
+        <a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
+          For Developers
+          <i class="material-icons">arrow_drop_up</i>
+        </a>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
+          <li class="mdl-menu__item">App developer resources</li>
+          <li class="mdl-menu__item">Android Open Source Project</li>
+          <li class="mdl-menu__item">Android SDK</li>
+          <li class="mdl-menu__item">Android for Work</li>
+        </ul>
+        <a class="android-link mdl-typography--font-light" href="">Blog</a>
+        <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
+      </div>
+
+    </footer>
   </div>
 </div>
