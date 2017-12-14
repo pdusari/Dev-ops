@@ -540,3 +540,21 @@ a img{
     display: none;
   }
 }
+
+
+#industryScreen .android-screens {
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#industryScreen .mdl-typography--display-1-color-contrast.mdl-typography--font-light.mdl-typography--subhead {
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+#industryScreen .android-more-section {
+  padding: 0;
+}
