@@ -32,9 +32,14 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  'get /': {
+    controller: 'IndexController',
+    action: 'index'
+},
+  'get /FAQs': {
+    controller: 'IndustriesController',
+    action: 'index'
+},
 
   /***************************************************************************
   *                                                                          *
