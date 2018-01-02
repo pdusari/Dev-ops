@@ -542,19 +542,31 @@ a img{
 }
 
 
-#industryScreen .android-screens {
+#industryScreen .android-screens, #projectScreen .android-screens {
   max-width: 1044px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-#industryScreen .mdl-typography--display-1-color-contrast.mdl-typography--font-light.mdl-typography--subhead {
+#industryScreen .mdl-typography--display-1-color-contrast.mdl-typography--font-light.mdl-typography--subhead, #projectScreen .mdl-typography--display-1-color-contrast.mdl-typography--font-light.mdl-typography--subhead {
   max-width: 1044px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
 }
 
-#industryScreen .android-more-section {
+#industryScreen .android-more-section, #projectScreen .android-more-section {
   padding: 0;
+}
+
+.project-details-content {
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.project-details-content > div {
+  padding: 1rem 3rem;
 }
