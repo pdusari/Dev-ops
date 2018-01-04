@@ -32,6 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+
   'get /': {
     controller: 'IndexController',
     action: 'index'
@@ -40,6 +41,16 @@ module.exports.routes = {
     controller: 'IndustriesController',
     action: 'index'
 },
+    'GET /industry/:industryID': {
+    controller: "IndustryController",
+    action: "view"
+  },
+
+  'GET /project/:industryID/:projectID': {
+    controller: "ProjectController",
+    action: "view"
+  }
+
 
   /***************************************************************************
   *                                                                          *
