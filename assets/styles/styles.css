@@ -565,8 +565,91 @@ a img{
   margin-right: auto;
   text-align: center;
   margin-bottom: 80px;
+  background: #fafafa;
 }
 
 .project-details-content > div {
+  margin: 1rem 3rem;
+  background: #fff;
+}
+
+.project-details-content > ul{
+  padding: 0;
+  border-bottom: 1px solid #dbecc9;
+}
+
+#bestPractices {
+  display: flex;
+  justify-items: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+#bestPractices > div {
+  width: 50%;
+}
+
+#bestPractices > div:first-child {
+  border-right: 2px solid #c2c2c2;
+}
+
+#bestPractices h5{
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: #dbdbdb;
+}
+
+#bestPractices ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+#bestPractices ul li {
   padding: 1rem 3rem;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+#bestPractices ul li:last-child {
+  border: none;
+}
+
+.tools-list tr th:nth-child(2), .tools-list tr td:nth-child(2){
+  max-width: 500px;
+  padding: 15px 30px;
+}
+
+.tools-list .btn {
+  background-color: #2abc80;
+}
+
+.tools-list .btn:focus, .tools-list .btn:hover {
+  background-color: #2da372;
+}
+
+.process p{
+  padding: 1rem 3rem;
+}
+
+.process img{
+  width: 100%;
+}
+
+.collection-right, .collection-left {
+  display: flex;
+  align-items: center;
+}
+
+.collection-left {
+  flex-direction: row-reverse;
+}
+
+.collection-right img, .collection-left img {
+  max-width: 30%;
+  padding: 0 2rem;
+}
+
+.collection-right p, .collection-left p {
+  text-align: left;
 }
