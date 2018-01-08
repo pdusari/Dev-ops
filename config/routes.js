@@ -33,8 +33,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    controller: "HomeController",
-    action: "view"
+    controller: "IndexController",
+    action: "index"
   },
 
   'GET /industry/:industryID': {
