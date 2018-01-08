@@ -1,5 +1,12 @@
 module.exports = {
-    view: (req, res) => {
-        res.render("homepage");
+    view: function(req, res) {
+       ContentService.getHomePageData(function(err, data) {
+         ContentService.getIndustriesData(function(err, Indata) {
+         res.view('homepage', {
+                               content: data,
+                               industries:Indata
+                           });
+       });
+       });
     }
 }
