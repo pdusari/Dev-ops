@@ -1,0 +1,38 @@
+header{
+    background: #000;
+}
+.navbar {
+    padding-top: 20px;
+    background: #000;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+a.nav-link {
+    font-size: 12px;
+    font-weight: bold;
+    color: white !important;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+
+ul>li>a.nav-link:hover {
+    color: #92D400 !important;
+}
+.navlogo {
+    height: 36px;
+}
+.btn-success {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 2px;
+    background-color: #92D400;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0.35rem 0.25rem;
+    border-radius: 9px;
+}

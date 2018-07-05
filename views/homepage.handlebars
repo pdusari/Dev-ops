@@ -1,124 +1,294 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<div class="bgnd-sec">
+        <div class="container-fluid text-center">
+            <section class="row content">
 
-  <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
-    <div class="mdl-layout__header-row">
-      <span class="android-title mdl-layout-title">
-        <img class="android-logo-image" src="images/android-logo.png">
-      </span>
-      <!-- Add spacer, to align navigation to the right in desktop -->
-      <div class="android-header-spacer mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <div class="android-navigation-container">
-        <nav class="android-navigation mdl-navigation">
-          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#overview">Overview</a>
-          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#fourPillers">Four pillars</a>
-          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#devopsCycle">Devops Cycle</a>
-          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#toolsUsed">Tools used</a>
-          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#industries">Industries</a>
-        </nav>
-      </div>
-    </div>
-  </div>
+                <div class="col-sm-12 text-left">
+                    <div class="section-one">
+                        <h1>DEVOPS DASHBOARD</h1>
+                        <h4>Your step towards DevOps Adoption</h4>
+                        <div class="btn-sec">
+                            <button class="btn btn-primary watch-video-btn">WATCH VIDEO</button>
+                            <a class="btn btn-primary view-industry-btn" href="/industry">VIEW INDUSTRIES</a>
+                        </div>
+                    </div>
+                </div>
 
-  <div class="android-content mdl-layout__content">
-    <a name="overview"></a>
-    <div class="android-be-together-section mdl-typography--text-center">
-      {{#each content.items}}
-      <div class="logo-font android-slogan">{{fields.title}}</div>
-      <div class="logo-font android-sub-slogan">{{fields.description}}</div>
-      {{/each}}
+            </section>
+        </div>
     </div>
-    <a name="fourPillers"></a>
-    <div class="android-screen-section mdl-typography--text-center">
-      <div class="mdl-typography--display-1-color-contrast">Powering screens of all sizes</div>
-      <div class="android-screens">
-        <div class="android-wear android-screen">
-          <a class="android-image-link" href="">
-            <img class="android-screen-image" src="images/wear-silver-on.png">
-            <img class="android-screen-image" src="images/wear-black-on.png">
-          </a>
-          <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Android Wear</a>
-        </div>
-        <div class="android-phone android-screen">
-          <a class="android-image-link" href="">
-            <img class="android-screen-image" src="images/nexus6-on.jpg">
-          </a>
-          <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Phones</a>
-        </div>
-        <div class="android-tablet android-screen">
-          <a class="android-image-link" href="">
-            <img class="android-screen-image" src="images/nexus9-on.jpg">
-          </a>
-          <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Tablets</a>
-        </div>
-        <div class="android-tv android-screen">
-          <a class="android-image-link" href="">
-            <img class="android-screen-image" src="images/tv-on.jpg">
-          </a>
-          <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Android TV</a>
-        </div>
-        <div class="android-auto android-screen">
-          <a class="android-image-link" href="">
-            <img class="android-screen-image" src="images/auto-on.jpg">
-          </a>
-          <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase mdl-typography--text-left" href="">Coming Soon: Android Auto</a>
-        </div>
-      </div>
-    </div>
-    <div class="android-wear-section">
-      <a name="devopsCycle"></a>
-      <div class="android-wear-band">
-        <div class="android-wear-band-text">
-          <div class="mdl-typography--display-2 mdl-typography--font-thin">The best of Google built in</div>
-          <p class="mdl-typography--headline mdl-typography--font-thin">
-            Android works perfectly with your favourite apps like Google Maps, Calendar and YouTube.
-          </p>
-          <p>
-            <a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="">
-              See what's new in the Play Store&nbsp;
-              <i class="material-icons">chevron_right</i>
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="android-customized-section">
-      <a name="toolsUsed"></a>
-      <div class="android-customized-section-text">
-        <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Customised by you, for you</div>
-        <p class="mdl-typography--font-light">
-          Put the stuff that you care about right on your home screen: the latest news, the weather or a stream of your recent photos.
-          <br>
-          <a href="" class="android-link mdl-typography--font-light">Customise your phone</a>
-        </p>
-      </div>
-      <div class="android-customized-section-image"></div>
-    </div>
-    <a name="industries"></a>
-    <div class="android-more-section">
-      <div class="android-section-title mdl-typography--display-1-color-contrast">More from Android</div>
-      <div class="android-card-container mdl-grid">
-        {{#each industries.items}}
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-          <div class="mdl-card__media">
-            <img src="images/more-from-1.png">
-          </div>
-          <div class="mdl-card__title">
-            <h4 class="mdl-card__title-text">{{fields.title}}</h4>
-          </div>
-          <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">{{fields.description}}</span>
-          </div>
-          <div class="mdl-card__actions">
-            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-              Make the switch
-              <i class="material-icons">chevron_right</i>
-            </a>
-          </div>
-        </div>
-        {{/each}}
+    <div class="bgnd-sec2" id="FourPillars">
+        <h1 class="four-pillars">Four Pillars</h1>
+        <hr/>
+        <div class="row section-two">
 
-      </div>
+             {{#each pillars}}
+            <div class="col-sm-3 sec-blocks wow zoomIn">
+                <div class="circular-img">
+                    <img src="{{fields.icon.asset.fields.file.url}}" />
+                </div>
+                <div class="box">
+                    <h3 class="heading-color">{{fields.name}}</h3>
+                    <hr/>
+                    <p class="text-color">- {{fields.description}} </p>
+                </div>
+            </div>
+                {{/each}}
+
+        </div>
+
+        <h1 class="four-pillars" id="DevelopementCycle">Development Cycle</h1>
+        <hr/>
+        <div class="section-three">
+            <div class="row">
+               {{#each devops}}
+                <div class="col-sm-3">
+                    <div class="img-box wow zoomIn">
+                        <img src="{{fields.icon.asset.fields.file.url}}" />
+                        <h3 class="img-desc">{{fields.title}}</h3>
+                    </div>
+
+                </div>
+                {{#ifThird @index}}
+              </div>
+              <div class="row row-two">
+                {{/ifThird}}
+                {{/each}}
+              </div>
+<!--
+            </div>
+            <div class="row row-two">
+
+                <div class="col-sm-3 mid-cycle">
+                    <div class="img-box wow zoomIn">
+                        <img src="../../app/images/ICO_Monitor.png" />
+                        <h3 class="monitor img-desc">MONITOR</h3>
+                    </div>
+
+                </div>
+                <div class="col-sm-3">
+
+                    <div class="img-box wow zoomIn">
+                        <img src="../../app/images/ICO_deploy.png" />
+                        <h3 class=" deploy img-desc">DEPLOY</h3>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+
+                    <div class="img-box wow zoomIn">
+                        <img src="../../app/images/ICO_release.png" />
+                        <h3 class="img-desc">RELEASE</h3>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+
+                    <div class="img-box wow zoomIn">
+                        <img src="../../app/images/ICO_test.png" />
+                        <h3 class="img-desc">TEST</h3>
+                    </div>
+                </div>
+                <div class="col-sm-3 mid-cycle right">
+
+                        <div class="img-box wow zoomIn">
+                            <img class="img-operate" src="../../app/images/ICO_operate.png" />
+
+                            <h3 class="img-desc">OPERATE</h3>
+                        </div>
+                    </div>
+
+            </div> -->
+        </div>
+        <div id="carouselMessage" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselMessage" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselMessage" data-slide-to="1"></li>
+              <li data-target="#carouselMessage" data-slide-to="2"></li>
+            </ol>
+            <div class="mid-section">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="bg-img">
+                        </div>
+                        <div>
+                            <img class="img-review" src="../../app/images/PHOTO_MANAGER.png" />
+                        </div>
+                        <div class="text-area">
+                            <p>This tool has helped a lot in managing my projects at my fingerprints.</p>
+                            <p>
+                                <b>
+                                    <i>Richard,Daniel</i>
+                                </b> - Manager</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-img">
+                        </div>
+                        <div>
+                            <img class="img-review" src="../../app/images/PHOTO_MANAGER.png" />
+                        </div>
+                        <div class="text-area">
+                            <p>This tool has helped a lot in managing my projects at my fingerprints.</p>
+                            <p>
+                                <b>
+                                    <i>Richard,Daniel</i>
+                                </b> - Manager</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-img">
+                        </div>
+                        <div>
+                            <img class="img-review" src="../../app/images/PHOTO_MANAGER.png" />
+                        </div>
+                        <div class="text-area">
+                            <p>This tool has helped a lot in managing my projects at my fingerprints.</p>
+                            <p>
+                                <b>
+                                    <i>Richard,Daniel</i>
+                                </b> - Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        <h1 class="four-pillars" id="Toolsused">Tools Used</h1>
+        <hr/>
+        <div class="row">
+            <div class="section-four">
+                <div class="row">
+
+                    <div class="col-sm-4 wow zoomIn">
+                        <div class="circular-img">
+                            <img src="../../app/images/Artboard 1.png" />
+                        </div>
+                        <div class="box">
+                            <h3 class="heading-color">Development & Version Control</h3>
+                            <hr/>
+                            <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery</p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="details-button" data-toggle="modal" data-target="#devModal">
+                                View Details
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="devModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="circular-img">
+                                                <img src="../../app/images/Artboard 1.png" />
+                                            </div>
+                                            <hr/>
+                                            <div class = "text-wrapper">
+                                                <h3 class="heading-color">Development & Version Control</h3>
+                                                <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery environment through a facilitated collaboration and communication.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 wow zoomIn" data-wow-delay = "0.5s">
+                        <div class="circular-img">
+                            <img src="../../app/images/Artboard 2.png" />
+                        </div>
+                        <div class="box">
+                            <h3 class="heading-color">Continuous Integration</h3>
+                            <hr/>
+                            <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery</p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="details-button" data-toggle="modal" data-target="#integrationModal">
+                                View Details
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="integrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="circular-img">
+                                                <img src="../../app/images/Artboard 2.png" />
+                                            </div>
+                                            <hr/>
+                                            <div class = "text-wrapper">
+                                                <h3 class="heading-color">Continuous Integration</h3>
+                                                <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery environment through a facilitated collaboration and communication</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 wow zoomIn" data-wow-delay = "1s">
+                            <div class="circular-img">
+                                <img src="../../app/images/Artboard 3.png" />
+                            </div>
+                            <div class="box">
+                                <h3 class="heading-color">Project Management</h3>
+                                <hr/>
+                                <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery</p>
+                                <!-- Button trigger modal -->
+                            <button type="button" class="details-button" data-toggle="modal" data-target="#projectModal">
+                                View Details
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="circular-img">
+                                                <img src="../../app/images/Artboard 3.png" />
+                                            </div>
+                                            <hr/>
+                                            <div class = "text-wrapper">
+                                                <h3 class="heading-color">Project Management</h3>
+                                                <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery environment through a facilitated collaboration and communication</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="four-pillars">Get In Touch</h1>
+        <hr/>
+        <div class="contact-us-div">
+            <div>
+                <textarea>Name</textarea>
+                <textarea>Email</textarea>
+            </div>
+            <div>
+                <textarea class="write-a-msg">Write a message</textarea>
+            </div>
+
+        </div>
     </div>
-  </div>
-</div>

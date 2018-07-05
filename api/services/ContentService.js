@@ -51,24 +51,59 @@ module.exports = {
 
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey, contentfulRequestHandler.bind(this));
     },
-
-    getIndustriesData: function(callBack) {
+    getPillarsData: function(callBack) {
         this.callBack = callBack;
         var ContentfulKey = process.env.CONTENTFUL_KEY,
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
-            console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries');
+        //    console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries');
+        request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=pillars', contentfulRequestHandler.bind(this));
+    },
+    getdevOpsCycleStagesData: function(callBack) {
+        this.callBack = callBack;
+        var ContentfulKey = process.env.CONTENTFUL_KEY,
+            ContentfulSpace = process.env.CONTENTFUL_SPACE,
+            cf_api = process.env.CF_PREVIEW_API;
+           // console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries');
+        request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=devOpsCycleStages&order=fields.orderby', contentfulRequestHandler.bind(this));
+    },
+    getIndustriesData: function(callBack) {
+        console.log("once");
+        this.callBack = callBack;
+        var ContentfulKey = process.env.CONTENTFUL_KEY,
+            ContentfulSpace = process.env.CONTENTFUL_SPACE,
+            cf_api = process.env.CF_PREVIEW_API;
+           console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries');
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries', contentfulRequestHandler.bind(this));
     },
 
-    getCompoundContent: function(EntryID, callBack) {
+    getProjectData: function(ProjectID, callBack) {
         this.callBack = callBack;
         var ContentfulKey = process.env.CONTENTFUL_KEY,
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
-
-        request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries/' + EntryID + '?access_token=' + ContentfulKey + '', contentfulRequestHandler.bind(this));
+      console.log('https://preview.contentful.com/spaces/qwppyk7r0xj8/entries?access_token=463fb6aaded084865adc68a8e08d20f192d60f7d73bd9c43fdebd49801abb47d&content_type=projects&fields.industry.sys.id=6jWhczfSJqkK6AY6MOEsse');
+        request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=projects&fields.industry.sys.id='+ProjectID, contentfulRequestHandler.bind(this));
     },
+    getProject: function(spaceid,callBack) {
+        this.callBack = callBack;
+        var ContentfulKey = process.env.CONTENTFUL_KEY,
+            ContentfulSpace = process.env.CONTENTFUL_SPACE,
+            cf_api = process.env.CF_PREVIEW_API;
+//spaces/{space_id}/content_types/{content_type_id}?access_token={access_token}
+        console.info('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries/'+spaceid+'?access_token=' + ContentfulKey);
+        request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries/'+spaceid+'?access_token=' + ContentfulKey, contentfulRequestHandler.bind(this));
+    },
+    getEntry: function(spaceid,assetid,callBack) {
+        this.callBack = callBack;
+        var ContentfulKey = process.env.CONTENTFUL_KEY,
+            ContentfulSpace = process.env.CONTENTFUL_SPACE,
+            cf_api = process.env.CF_PREVIEW_API;
+//spaces/{space_id}/content_types/{content_type_id}?access_token={access_token}
+        console.info('https://' + cf_api + '/spaces/' + spaceid + '/assets/'+assetid+'?access_token=' + ContentfulKey);
+        request('https://' + cf_api + '/spaces/' + spaceid + '/assets/'+assetid+'?access_token=' + ContentfulKey, contentfulRequestHandler.bind(this));
+    },
+
 
     /**
      * getSubmissions - method to get data from salesforce or json and send back the JSON that drives

@@ -1,0 +1,49 @@
+<div id="industryScreen" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+  <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__header-row">
+      <span class="android-title mdl-layout-title">
+        <img class="android-logo-image" src="../images/android-logo.png">
+      </span>
+    </div>
+  </div>
+
+  <div class="android-content mdl-layout__content">
+    <div class="android-screen-section mdl-typography--text-center">
+      <div class="android-screens">
+        <div class="android-tv android-screen">
+          <a class="android-image-link" href="">
+            <img class="android-screen-image" src="{{asset.fields.file.url}}">
+          </a>
+        </div>
+      </div>
+      {{#each content.items}}
+      <div class="mdl-typography--display-1-color-contrast mdl-typography--font-light mdl-typography--subhead">{{fields.description}}</div>
+      {{/each}}
+    </div>
+    <div class="android-more-section">
+      <div class="android-section-title mdl-typography--display-1-color-contrast">Projects</div>
+      <div class="android-card-container mdl-grid">
+  {{#each Projects.Entry}}
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+          <div class="mdl-card__media">
+            <img src="../images/more-from-1.png">
+          </div>
+          <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">{{fields.title}}</h4>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <span class="mdl-typography--font-light mdl-typography--subhead">{{fields.description}}</span>
+          </div>
+          <div class="mdl-card__actions">
+            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+              Make the switch
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

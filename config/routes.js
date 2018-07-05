@@ -37,11 +37,11 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'view'
   },
-  'GET /industry/:industryID': {
+  'GET /industry': {
     controller: "IndustryController",
     action: "view"
   },
-  'GET /project/:industryID/:projectID': {
+  'GET /project/:industryID': {
     controller: "ProjectController",
     action: "view"
   }

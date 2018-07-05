@@ -1,16 +1,16 @@
 module.exports = {
     view: (req, res) => {
 
-        if (!req.params && !req.params.industryID) {
-            sails.log.error("No industry ID to fetch data");
-            return res.render("400", {"message" : "Please select a proper industry, or contact admin"})
-        }
+      var spaceid = req.param('industryID');
+        ContentService.getProjectData(spaceid,function(err, data) {
 
-        if (!req.params && !req.params.projectID) {
-            sails.log.error("No project ID to fetch data");
-            return res.render("400", {"message" : "Please select correct Project, or contact admin"})
-        }
+           var resultset=JsonService.mergeProjectsArrays(data.items,data.includes.Asset);
+          // console.log("data",resultset);
+          res.view('project', {
+                                content:resultset
+                            });
 
-        res.render("project");
+          //res.json(resultset);
+      });
     }
 }
