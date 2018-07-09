@@ -15,11 +15,12 @@ module.exports = {
           }
         }
       }
-      
+
       var resultset=JsonService.mergeIndustryArrays(array1,data.includes.Asset);
       console.log("data items",resultset);
       res.view('industry', {
-        industries: resultset
+        industries: resultset,
+        LOGO:'images/navlogo.png'
       });
      // res.json(resultset);
     });

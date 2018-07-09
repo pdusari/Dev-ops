@@ -9,7 +9,8 @@ module.exports = {
           res.view('homepage', {
             devops: resultset,
             pillars: pillarsresultset,
-            asset: asset
+            asset: asset,
+            LOGO:'images/navlogo.png'
           });
         //  res.json(resultset);
         });

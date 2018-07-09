@@ -42,6 +42,14 @@ module.exports = {
 
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=devops', contentfulRequestHandler.bind(this));
     },
+    getSearchData: function(Value,callBack) {
+        this.callBack = callBack;
+        var ContentfulKey = process.env.CONTENTFUL_KEY,
+            ContentfulSpace = process.env.CONTENTFUL_SPACE,
+            cf_api = process.env.CF_PREVIEW_API;
+            console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=projects&fields.title[match]=pep');
+        request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=projects&fields.title[match]='+Value, contentfulRequestHandler.bind(this));
+    },
     getAllData: function(callBack) {
         this.callBack = callBack;
         var ContentfulKey = process.env.CONTENTFUL_KEY,
