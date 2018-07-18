@@ -1,4 +1,4 @@
-<a href="./industry" class="btn btn-default industry-link-btn text-left" style="float:left;margin-top:20px; color:#707070;" >Back to Industries </a>
+<a href="../industry" class="btn btn-default industry-link-btn text-left" style="float:left;margin-top:20px; color:#707070;border:solid 1px #cecece;" ><i class="fa fa-arrow-left" aria-hidden="true"></i>Back to Industries </a>
 <div class="container text-center background ProjectPage" style="min-height:520px;">
 
 
@@ -7,15 +7,15 @@
 <p>Global C &IP Industry group provides integrated services to member firm clients<br/> across the entire value chain,
 from raw materials to the end consumer.</p>
   {{#if content}}
-<form action="/projectsearch" method="POST" >
+
   <input type="hidden" name="industryId" id="industryId" value="">
 <div class="input-group text-center">
-<input type="text" class="form-control" placeholder="Search Project here" name="search">
+<input type="text" class="form-control search-projects" placeholder="Search Project here" name="search">
 <div class="input-group-btn">
 <button class="btn btn-default" type="submit" id="Searchprojects"><i class="glyphicon glyphicon-search">Search</i></button>
 </div>
 </div>
-</form>
+
 {{/if}}
 </div>
 
@@ -36,7 +36,5 @@ from raw materials to the end consumer.</p>
   <p class="logo-text">No Project Found</p>
 {{/if}}
 </div>
-{{#if content}}
-<button type="button" class="btn btn-default load-more-btn" >LOAD MORE </button>
-{{/if}}
+
 </div>

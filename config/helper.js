@@ -28,3 +28,27 @@ Handlebars.registerHelper('ifThird', function (index, options) {
    }
 
 });
+Handlebars.registerHelper('ifThird', function (index, options) {
+   if(index == 2){
+      return options.fn(this);
+   } else {
+      return options.inverse(this);
+   }
+
+});
+Handlebars.registerHelper('iffourth', function (index, options) {
+   if(index == 3){
+      return options.fn(this);
+   } else {
+      return options.inverse(this);
+   }
+
+});
+Handlebars.registerHelper('iflast', function (index, options) {
+   if(index == 7){
+      return options.fn(this);
+   } else {
+      return options.inverse(this);
+   }
+
+});

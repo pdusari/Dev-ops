@@ -37,6 +37,10 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'view'
   },
+  'POST /email': {
+    controller: 'EmailController',
+    action: 'index'
+  },
   'GET /industry': {
     controller: "IndustryController",
     action: "view"

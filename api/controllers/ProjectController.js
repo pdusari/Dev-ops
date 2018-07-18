@@ -10,13 +10,13 @@ module.exports = {
         var resultset = JsonService.mergeProjectsArrays(data.items, data.includes.Asset);
       }
       //var resultset=JsonService.mergeProjectsArrays(data.items,data.includes.Asset);
-      // console.log("data",resultset);
+    //  console.log("data",resultset);
       res.view('project', {
         content: resultset,
         LOGO: '../images/navlogo.png'
       });
 
-      //  res.json(data);
+      //  res.json(resultset);
     });
   },
   search:(req,res)=>{

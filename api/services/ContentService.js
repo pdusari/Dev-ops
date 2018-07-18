@@ -67,6 +67,22 @@ module.exports = {
         //    console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries');
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=pillars', contentfulRequestHandler.bind(this));
     },
+    getToolsData: function(callBack) {
+        this.callBack = callBack;
+        var ContentfulKey = process.env.CONTENTFUL_KEY,
+            ContentfulSpace = process.env.CONTENTFUL_SPACE,
+            cf_api = process.env.CF_PREVIEW_API;
+        //    console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries');
+        request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=tools', contentfulRequestHandler.bind(this));
+    },
+    getReviewsData: function(callBack) {
+        this.callBack = callBack;
+        var ContentfulKey = process.env.CONTENTFUL_KEY,
+            ContentfulSpace = process.env.CONTENTFUL_SPACE,
+            cf_api = process.env.CF_PREVIEW_API;
+        //    console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries');
+        request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=review', contentfulRequestHandler.bind(this));
+    },
     getdevOpsCycleStagesData: function(callBack) {
         this.callBack = callBack;
         var ContentfulKey = process.env.CONTENTFUL_KEY,
@@ -81,7 +97,7 @@ module.exports = {
         var ContentfulKey = process.env.CONTENTFUL_KEY,
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
-           console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries');
+          // console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries');
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries', contentfulRequestHandler.bind(this));
     },
 
@@ -90,7 +106,7 @@ module.exports = {
         var ContentfulKey = process.env.CONTENTFUL_KEY,
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
-      console.log('https://preview.contentful.com/spaces/qwppyk7r0xj8/entries?access_token=463fb6aaded084865adc68a8e08d20f192d60f7d73bd9c43fdebd49801abb47d&content_type=projects&fields.industry.sys.id=6jWhczfSJqkK6AY6MOEsse');
+    //  console.log('https://preview.contentful.com/spaces/qwppyk7r0xj8/entries?access_token=463fb6aaded084865adc68a8e08d20f192d60f7d73bd9c43fdebd49801abb47d&content_type=projects&fields.industry.sys.id=6jWhczfSJqkK6AY6MOEsse');
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=projects&fields.industry.sys.id='+ProjectID, contentfulRequestHandler.bind(this));
     },
     getProject: function(spaceid,callBack) {

@@ -1,5 +1,5 @@
     <div class="bgnd-sec2">
-            <a class="back-to-home" href="../../app/html/homepage.html"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back to Home</a>
+            <a class="back-to-home" href="./"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back to Home</a>
             <h1 class="four-pillars">Industries</h1>
             <hr/>
              {{#each industries}}
@@ -8,7 +8,7 @@
                     <img src="{{fields.industryImage.asset.fields.file.url}}" />
                 </div>
                 <div class="col-sm-10 industry-ctr">
-                    <h3 class="text-color">{{fields.name}}</h3>
+                    <h3 class="text-color">{{fields.title}}</h3>
                     <p class="text-color">{{fields.description}}</p>
                     <a class="btn btn-primary view-project-btn" href="./project/{{sys.id}}">View Project</a>
                 </div>

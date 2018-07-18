@@ -41,9 +41,9 @@
         <div class="section-three">
             <div class="row">
                {{#each devops}}
-                <div class="col-sm-3">
-                    <div class="img-box wow zoomIn">
-                        <img src="{{fields.icon.asset.fields.file.url}}" />
+                <div class="col-sm-3 {{#iffourth @index}} mid-cycle{{/iffourth}}{{#iflast @index}}mid-cycle right{{/iflast}}">
+                    <div class="img-box wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+                        <img src="{{fields.icon.asset.fields.file.url}}" {{#iflast @index}} height="90" {{/iflast}}/>
                         <h3 class="img-desc">{{fields.title}}</h3>
                     </div>
 
@@ -99,54 +99,30 @@
         </div>
         <div id="carouselMessage" class="carousel slide" data-ride="carousel" data-interval="3000">
             <ol class="carousel-indicators">
+              {{#each review}}
               <li data-target="#carouselMessage" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselMessage" data-slide-to="1"></li>
-              <li data-target="#carouselMessage" data-slide-to="2"></li>
+
+                {{/each}}
             </ol>
             <div class="mid-section">
                 <div class="carousel-inner">
+                  {{#each review}}
                     <div class="carousel-item active">
                         <div class="bg-img">
                         </div>
                         <div>
-                            <img class="img-review" src="./images/PHOTO_MANAGER.png" />
+                            <img class="img-review" src="{{fields.asset.fields.file.url}}" />
                         </div>
                         <div class="text-area">
-                            <p>This tool has helped a lot in managing my projects at my fingerprints.</p>
+                            <p>{{fields.description}}</p>
                             <p>
                                 <b>
-                                    <i>Richard,Daniel</i>
+                                    <i>{{fields.name}}</i>
                                 </b> - Manager</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="bg-img">
-                        </div>
-                        <div>
-                            <img class="img-review" src="./images/PHOTO_MANAGER.png" />
-                        </div>
-                        <div class="text-area">
-                            <p>This tool has helped a lot in managing my projects at my fingerprints.</p>
-                            <p>
-                                <b>
-                                    <i>Richard,Daniel</i>
-                                </b> - Manager</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="bg-img">
-                        </div>
-                        <div>
-                            <img class="img-review" src="./images/PHOTO_MANAGER.png" />
-                        </div>
-                        <div class="text-area">
-                            <p>This tool has helped a lot in managing my projects at my fingerprints.</p>
-                            <p>
-                                <b>
-                                    <i>Richard,Daniel</i>
-                                </b> - Manager</p>
-                        </div>
-                    </div>
+                    {{/each}}
+
                 </div>
             </div>
           </div>
@@ -156,22 +132,22 @@
         <div class="row">
             <div class="section-four">
                 <div class="row">
-
+                  {{#each tools}}
                     <div class="col-sm-4 wow zoomIn">
                         <div class="circular-img">
-                            <img src="./images/Artboard 1.png" />
+                            <img src="{{fields.icon.asset.fields.file.url}}" />
                         </div>
                         <div class="box">
-                            <h3 class="heading-color">Development & Version Control</h3>
+                            <h3 class="heading-color">{{fields.name}}</h3>
                             <hr/>
-                            <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery</p>
+                            <p class="text-color">{{fields.description}}</p>
                             <!-- Button trigger modal -->
-                            <button type="button" class="details-button" data-toggle="modal" data-target="#devModal">
+                            <button type="button" class="details-button" data-toggle="modal" data-target="#{{sys.id}}">
                                 View Details
                             </button>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="devModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="{{sys.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -181,12 +157,12 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="circular-img">
-                                                <img src="./images/Artboard 1.png" />
+                                                <img src="{{fields.icon.asset.fields.file.url}}" />
                                             </div>
                                             <hr/>
                                             <div class = "text-wrapper">
-                                                <h3 class="heading-color">Development & Version Control</h3>
-                                                <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery environment through a facilitated collaboration and communication.</p>
+                                                <h3 class="heading-color">{{fields.name}}</h3>
+                                                <p class="text-color">{{fields.description}}</p>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -197,98 +173,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 wow zoomIn" data-wow-delay = "0.5s">
-                        <div class="circular-img">
-                            <img src="./images/Artboard 2.png" />
-                        </div>
-                        <div class="box">
-                            <h3 class="heading-color">Continuous Integration</h3>
-                            <hr/>
-                            <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery</p>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="details-button" data-toggle="modal" data-target="#integrationModal">
-                                View Details
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="integrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="circular-img">
-                                                <img src="./images/Artboard 2.png" />
-                                            </div>
-                                            <hr/>
-                                            <div class = "text-wrapper">
-                                                <h3 class="heading-color">Continuous Integration</h3>
-                                                <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery environment through a facilitated collaboration and communication</p>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
+                    {{/each}}
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 wow zoomIn" data-wow-delay = "1s">
-                            <div class="circular-img">
-                                <img src="./images/Artboard 3.png" />
-                            </div>
-                            <div class="box">
-                                <h3 class="heading-color">Project Management</h3>
-                                <hr/>
-                                <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery</p>
-                                <!-- Button trigger modal -->
-                            <button type="button" class="details-button" data-toggle="modal" data-target="#projectModal">
-                                View Details
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="circular-img">
-                                                <img src="./images/Artboard 3.png" />
-                                            </div>
-                                            <hr/>
-                                            <div class = "text-wrapper">
-                                                <h3 class="heading-color">Project Management</h3>
-                                                <p class="text-color">Take silos of people, tools, informantion & automation, and create a continuous delivery environment through a facilitated collaboration and communication</p>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
 
         <h1 class="four-pillars">Get In Touch</h1>
         <hr/>
+        <form name="contactUS" onsubmit="return false;">
         <div class="contact-us-div" id="contactus">
             <div>
-                <textarea>Name</textarea>
-                <textarea>Email</textarea>
+                <textarea name="name">Name</textarea>
+                <textarea name="email">Email</textarea>
             </div>
             <div>
-                <textarea class="write-a-msg">Write a message</textarea>
+                <textarea name="message" class="write-a-msg">Write a message</textarea>
+            </div>
+            <div>
+              <button id="sendEmail">Send</button>
             </div>
 
         </div>
+      </form>
     </div>
