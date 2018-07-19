@@ -1,7 +1,6 @@
 module.exports = {
   index: (req, res) => {
-    console.log("req.query",req.query);
-    console.log("req.body",req.body);
+
     var emailConfig = {
         toEmails:  'mogoyal@deloitte.com',
         ccEmails:  'ankitsaxena7@deloitte.com',
