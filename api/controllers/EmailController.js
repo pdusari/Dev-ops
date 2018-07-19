@@ -3,10 +3,10 @@ module.exports = {
     console.log("req.query",req.query);
     console.log("req.body",req.body);
     var emailConfig = {
-        toEmails:  'pdusari@deloitte.com',
-        // ccEmails:  'ankitsaxena7@deloitte.com',
+        toEmails:  'mogoyal@deloitte.com',
+        ccEmails:  'ankitsaxena7@deloitte.com',
         // bccEmails: 'pdusari@deloitte.com',
-        subject: "Devops query from:"+req.body.name,
+        subject: "Query from Devops Portal :"+req.body.name,
         message: req.body.message,
         fromEmail:req.body.email
     }
