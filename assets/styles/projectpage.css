@@ -15,7 +15,12 @@
     margin: auto;
     min-height:200px;
 }
-
+.ProjectPage hr{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0.5px solid #cecece;
+  width:100%;
+}
 /* Hide the carousel text when the screen is less than 600 pixels wide */
 @media (max-width: 600px) {
   .ProjectPage .carousel-caption {
