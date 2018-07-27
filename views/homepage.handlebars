@@ -7,12 +7,25 @@
                         <h1>DEVOPS DASHBOARD</h1>
                       <img class="hero-gif" src="./images/DevOps-Portal-Caption.gif">
                         <div class="btn-sec">
-                            <button class="btn btn-primary watch-video-btn">WATCH VIDEO</button>
+                              <button class="btn btn-primary watch-video-btn" data-toggle="modal" data-target="#videoModal">WATCH VIDEO</button>
                             <a class="btn btn-primary view-industry-btn" href="/industry">VIEW INDUSTRIES</a>
                         </div>
                     </div>
                 </div>
-
+                <div class="modal" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                            <video controls="controls" preload="auto" id="video1" name="media" style="width: 100%; height: auto; margin:0 auto;">
+                                <source src="./images/DevOps Dashboard_lowRes_Mobile.webm" type="video/webm">
+                                <source src="./images/DevOps Dashboard_lowRes_Mobile.mp4" type="video/mp4">
+                                <source src="./images/DevOps Dashboard_lowRes_Mobile.ogg" type="video/ogg">
+                                Your browser doesn't support HTML5 video tag.
+                            </video>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </section>
         </div>
     </div>
