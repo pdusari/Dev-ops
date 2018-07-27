@@ -76,7 +76,12 @@ ul>li>a.nav-link:hover {
 }
 .survey-card .yes-btn{
     background-color: #92D400;
-    color: #fff
+    color: #fff;
+}
+.survey-card .yes-btn a{
+  text-decoration: none;
+  background-color: #92D400;
+  color: #fff;
 }
 .survey-card .no-btn{
     color: #92D400;
