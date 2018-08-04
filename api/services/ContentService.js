@@ -72,7 +72,7 @@ module.exports = {
         var ContentfulKey = process.env.CONTENTFUL_KEY,
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
-        //    console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=industries');
+           console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=tools');
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=tools', contentfulRequestHandler.bind(this));
     },
     getReviewsData: function(callBack) {

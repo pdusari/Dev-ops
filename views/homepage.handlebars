@@ -177,6 +177,11 @@
                                                 <h3 class="heading-color">{{fields.name}}</h3>
                                                 <p class="text-color">{{fields.description}}</p>
                                             </div>
+                                            <div class = "icon-wrapper">
+                                              {{#each fields.icon.toolsused}}
+                                                <a href="{{fields.description}}" target="_blank"><img class="col-sm-2" src="{{fields.file.url}}"></a>
+                                                {{/each}}
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
 
@@ -194,7 +199,7 @@
 
         <h1 class="four-pillars">Get In Touch</h1>
         <hr/>
-        <form name="contactUS" onsubmit="return false;" style="padding-bottom:20px">
+        <!-- <form name="contactUS" onsubmit="return false;" style="padding-bottom:20px">
         <div class="contact-us-div" id="contactus">
             <div>
                 <textarea name="name">Name</textarea>
@@ -208,7 +213,20 @@
             </div>
 
         </div>
-      </form>
+      </form> -->
+      <div class="contact-us-div">
+       <h3 class="heading-color">For Any Queries Please Contact:</h3>
+       <p class="text-color">
+           Monika Goyal <a href="">mogoyal@deloitte.com</a>
+       </p>
+       <p class="text-color">
+           Ankit Saxena <a href="">ankitsaxena7@deloitte.com</a>
+       </p>
+       <p class="text-color">
+           Prashant Kaviparapu <a href="">pkaviparapu@deloitte.com</a>
+       </p>
+
+   </div>
       <!-- Button trigger modal -->
       <button type="button" class="btn survey-btn" data-toggle="modal" data-target="#exampleModal">
               Survey Link

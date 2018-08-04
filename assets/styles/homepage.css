@@ -28,7 +28,7 @@ hr{
 }
 
 .section-one {
-    margin-top: 70px;
+    margin-top: 187px;
     padding: 27px 0px 0px 51px;
     color: #fff;
 }
@@ -313,30 +313,16 @@ div.section-four>div.row>div.col-sm-4>div.img-box>img {
 .contact-us-div {
     width: 30%;
     border-radius: 28px;
-    padding: 30px 15px 0;
+    padding: 30px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     background: #fff;
     -webkit-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
 }
-.contact-us-div textarea{
-    border: 0;
-    border-radius: 4px;
-    color: #d2d2d2;
-    padding: 0 10px;
-    height: 40px;
-    -webkit-box-shadow: 0px 1px 6px 1px rgba(210,210,210,1);
-    -moz-box-shadow: 0px 1px 6px 1px rgba(210,210,210,1);
-    box-shadow: 0px 1px 6px 1px rgba(210,210,210,1);
-    width: 49%;
-}
-.contact-us-div textarea.write-a-msg {
-    padding: 10px 20px 20px;
-    width: 100%;
-    margin-bottom: 20px;
-    height: auto;
+.contact-us-div .text-color a{
+    color: #92D400;
 }
 .carousel-indicators li{
     background-color: #dcdcdc;
