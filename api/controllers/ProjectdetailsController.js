@@ -25,11 +25,17 @@ module.exports = {
       var fieldsdata=markdown.toHTML(data.fields.data);
       data.fields.data=fieldsdata;
     }
-
-  // res.json(data);
-    res.view('details', {
-      content: data,
-      LOGO: '../images/navlogo.png'
+    var imageid=data.fields.image.sys.id;
+    ContentService.getImagedetails(imageid,function(err, succdata) {
+      if(succdata.fields.file.url){
+        data.assets=succdata.fields.file.url;
+      }
+    //  console.log(succdata);
+      //res.json(data);
+      res.view('details', {
+        content: data,
+        LOGO: '../images/navlogo.png'
+      });
     });
 
   });

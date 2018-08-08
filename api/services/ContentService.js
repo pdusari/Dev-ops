@@ -57,8 +57,17 @@ module.exports = {
         var ContentfulKey = process.env.CONTENTFUL_KEY,
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
-        console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries/'+id+'?access_token=' + ContentfulKey+'&include=1');
+      //  console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries/'+id+'?access_token=' + ContentfulKey+'&include=1');
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries/'+id+'?access_token=' + ContentfulKey+'&include=1', contentfulRequestHandler.bind(this));
+    },
+    getImagedetails: function(id,callBack) {
+      console.log("Service CAlled!!!");
+        this.callBack = callBack;
+        var ContentfulKey = process.env.CONTENTFUL_KEY,
+            ContentfulSpace = process.env.CONTENTFUL_SPACE,
+            cf_api = process.env.CF_PREVIEW_API;
+        console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/assets/'+id+'?access_token=' + ContentfulKey);
+        request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/assets/'+id+'?access_token=' + ContentfulKey, contentfulRequestHandler.bind(this));
     },
     getAllData: function(callBack) {
         this.callBack = callBack;
