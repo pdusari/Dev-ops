@@ -49,6 +49,10 @@ module.exports.routes = {
     controller: "ProjectController",
     action: "view"
   },
+  'GET /projectdetails/:ID': {
+    controller: "ProjectdetailsController",
+    action: "index"
+  },
   'POST /projectsearch': {
     controller: "ProjectController",
     action: "search"

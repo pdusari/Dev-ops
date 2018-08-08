@@ -20,6 +20,7 @@ function parseDate(dateString) {
 function contentfulRequestHandler(error, response, body) {
     try {
         var result = JSON.parse(body);
+        console.log("Callback called");
         this.callBack(null, result);
     } catch (error) {
         this.callBack(error, null);
@@ -38,7 +39,7 @@ module.exports = {
         var ContentfulKey = process.env.CONTENTFUL_KEY,
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
-            console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=devops');
+          //  console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=devops');
 
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=devops', contentfulRequestHandler.bind(this));
     },
@@ -47,15 +48,24 @@ module.exports = {
         var ContentfulKey = process.env.CONTENTFUL_KEY,
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
-            console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=projects&fields.title[match]=pep');
+          //  console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=projects&fields.title[match]=pep');
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=projects&fields.title[match]='+Value, contentfulRequestHandler.bind(this));
+    },
+    getProjectdetails: function(id,callBack) {
+      console.log("Service CAlled!!!");
+        this.callBack = callBack;
+        var ContentfulKey = process.env.CONTENTFUL_KEY,
+            ContentfulSpace = process.env.CONTENTFUL_SPACE,
+            cf_api = process.env.CF_PREVIEW_API;
+        console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries/'+id+'?access_token=' + ContentfulKey+'&include=1');
+        request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries/'+id+'?access_token=' + ContentfulKey+'&include=1', contentfulRequestHandler.bind(this));
     },
     getAllData: function(callBack) {
         this.callBack = callBack;
         var ContentfulKey = process.env.CONTENTFUL_KEY,
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
-            console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=devops');
+          //  console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey + '&content_type=devops');
 
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey, contentfulRequestHandler.bind(this));
     },
@@ -72,7 +82,7 @@ module.exports = {
         var ContentfulKey = process.env.CONTENTFUL_KEY,
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
-           console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=tools');
+        //   console.log('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=tools');
         request('https://' + cf_api + '/spaces/' + ContentfulSpace + '/entries?access_token=' + ContentfulKey+'&content_type=tools', contentfulRequestHandler.bind(this));
     },
     getReviewsData: function(callBack) {
@@ -124,7 +134,7 @@ module.exports = {
             ContentfulSpace = process.env.CONTENTFUL_SPACE,
             cf_api = process.env.CF_PREVIEW_API;
 //spaces/{space_id}/content_types/{content_type_id}?access_token={access_token}
-        console.info('https://' + cf_api + '/spaces/' + spaceid + '/assets/'+assetid+'?access_token=' + ContentfulKey);
+      //  console.info('https://' + cf_api + '/spaces/' + spaceid + '/assets/'+assetid+'?access_token=' + ContentfulKey);
         request('https://' + cf_api + '/spaces/' + spaceid + '/assets/'+assetid+'?access_token=' + ContentfulKey, contentfulRequestHandler.bind(this));
     },
 

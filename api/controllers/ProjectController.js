@@ -16,7 +16,7 @@ module.exports = {
         LOGO: '../images/navlogo.png'
       });
 
-      //  res.json(resultset);
+      // res.json(resultset);
     });
   },
   search:(req,res)=>{
@@ -34,5 +34,26 @@ module.exports = {
       });
     });
 
-  }
+  },
+  details:(req,res)=>{
+    var markdown = require( "markdown" ).markdown;
+    var id = req.param('ID');
+  ContentService.getProjectdetailsData(id,function(err, data) {
+    console.log("one time");
+    if(data.fields){
+      data.fields.tools=markdown.toHTML( data.fields.tools);
+       data.fields.bestpractice=markdown.toHTML( data.fields.bestpractice);
+       data.fields.ideas=markdown.toHTML( data.fields.ideas);
+       data.fields.data=markdown.toHTML( data.fields.data);
+       data.fields.reviews=markdown.toHTML( data.fields.reviews);
+    }
+
+    //res.json(data);
+    res.view('projectdetails', {
+      content: data,
+      LOGO: '../images/navlogo.png'
+    });
+  });
+
+}
 }

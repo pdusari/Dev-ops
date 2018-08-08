@@ -97,3 +97,74 @@ body.modal-open{
     background-size: contain;
     background-position: center;
 }
+
+
+    .detailsPage .input-group {
+        margin-left: 80px;
+  width: 900px;
+        margin-top:30px;
+    }
+    .detailsPage .logo-text {
+        font-size:1.5rem;
+    }
+
+    .detailsPage .background {
+        background:url("Group 86.png") no-repeat;
+        background-size:cover;
+        height:800px;
+    }
+    .detailsPage .load-more-btn {
+  background-color: rgba(0,0,0,0.75);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-top: 40px;
+  padding: 8px 20px;
+
+    }
+    .detailsPage .top-nav {
+        color:#707070;
+    }
+    .detailsPage .icons{
+  display:inline-block;
+  width: 30px;
+  height: 64px;
+  padding-left:50px;
+  padding-right:60px;
+ }
+    .detailsPage .icons a:hover {
+   background: #C93;
+}
+
+    .detailsPage .sub-desc {
+        text-align: center;
+        margin-right: 110px;
+    }
+    .detailsPage .targetDiv {
+        display:none;
+    }
+    .detailsPage .imag {
+        width:75px;
+    }
+    .detailsPage .best-prac {
+        max-width: 200px;
+        border: 1px solid #fff;
+  background-color: #fff;
+       -webkit-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
+        text-align: center;
+        margin-top: 25px;
+  max-width: 800px;
+  margin-left: 100px;
+  height:auto;
+  padding:15px;
+
+    }
+    .detailsPage .second-desc {
+        padding-top:20px;
+    }
+    .detailsPage .main-desc {
+        margin-bottom:40px;
+        margin-top:100px;
+    }
