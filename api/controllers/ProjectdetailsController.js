@@ -29,13 +29,17 @@ module.exports = {
     ContentService.getImagedetails(imageid,function(err, succdata) {
       if(succdata.fields.file.url){
         data.assets=succdata.fields.file.url;
+        res.view('details', {
+          content: data,
+          LOGO: '../images/navlogo.png'
+        });
+
+      }else{
+        res.serverError("we will get back to you as soon as possible")
       }
     //  console.log(succdata);
       //res.json(data);
-      res.view('details', {
-        content: data,
-        LOGO: '../images/navlogo.png'
-      });
+
     });
 
   });
