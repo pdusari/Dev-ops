@@ -19,20 +19,16 @@ module.exports = {
 
       if (array1[i].fields.toolused) {
         var toolsused=array1[i].fields.toolused;
-        console.log("array1[i].fields.toolused", toolsused.length);
         arr2 = [];
-        for (var i = 0; i < toolsused.length; i++) {
+        for (var j = 0; j < toolsused.length; j++) {
           var usedarray = _.find(array2, function(o) {
-            return o.sys.id == toolsused[i].sys.id;
+            return o.sys.id == toolsused[j].sys.id;
           });
           arr2.push(usedarray);
         }
         array1[i].fields.icon.toolsused = arr2;
       }
-
-
       array1[i].fields.icon.asset = arr;
-
     }
     return array1;
   },
