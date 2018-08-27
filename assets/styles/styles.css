@@ -653,3 +653,8 @@ a img{
 .collection-right p, .collection-left p {
   text-align: left;
 }
+
+.footer {
+  position: relative;
+  bottom: 0px;
+}

@@ -97,7 +97,12 @@ body.modal-open{
     background-size: contain;
     background-position: center;
 }
-
+    .detailsPage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .detailsPage .input-group {
         margin-left: 80px;
@@ -138,33 +143,42 @@ body.modal-open{
 
     .detailsPage .sub-desc {
         text-align: center;
-        margin-right: 110px;
+        display: flex;
+        justify-content: space-between;
     }
     .detailsPage .targetDiv {
         display:none;
     }
     .detailsPage .imag {
         width:75px;
+        margin: 20px;
     }
     .detailsPage .best-prac {
         max-width: 200px;
         border: 1px solid #fff;
-  background-color: #fff;
-       -webkit-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
-  box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
-        text-align: center;
+        background-color: #fff;
+        -webkit-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
+        box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
+        text-align: left;
         margin-top: 25px;
-  max-width: 800px;
-  margin-left: 100px;
-  height:auto;
-  padding:15px;
-
+        max-width: 800px;
+        min-width: 800px;
+        height:auto;
+        padding:15px;
+        margin-bottom: 40px;
     }
+
+    .detailsPage .best-prac .header-logo{
+        height: 100px;
+        width: 100px;
+    }
+
     .detailsPage .second-desc {
         padding-top:20px;
     }
     .detailsPage .main-desc {
         margin-bottom:40px;
-        margin-top:100px;
+        margin-top:30px;
+        min-width: 800px;
     }
