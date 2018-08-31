@@ -15,8 +15,12 @@ hr{
 }
 .bgnd-sec {
     background: url("../images/banner-img.png") no-repeat;
-    min-height: 780px;
-    background-size: cover;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto auto;
+    min-height: 422px;
+    background-size: 100% auto;
+    background-position: 0px -193px;
 }
 
 .bgnd-sec2 {
@@ -28,7 +32,7 @@ hr{
 }
 
 .section-one {
-    margin-top: 187px;
+    margin-top: 10px;
     padding: 27px 0px 0px 51px;
     color: #fff;
 }
@@ -160,7 +164,7 @@ hr{
 }
 .four-pillars {
     text-align: center;
-    padding-top: 75px;
+    padding-top: 40px;
     color: #707070;
 }
 
@@ -320,7 +324,13 @@ div.section-four>div.row>div.col-sm-4>div.img-box>img {
     -webkit-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.75);
+    margin-bottom: 30px;
 }
+
+.tool-description{
+    margin-top: 30px;
+}
+
 .contact-us-div .text-color a{
     color: #92D400;
 }
@@ -360,7 +370,7 @@ div.section-four>div.row>div.col-sm-4>div.img-box>img {
     color: #6B6B6B;
     border: 1px solid #707070;
     padding: 0.5%;
-    border-radius: 30px;
+    border-radius: 4px;
     display: inline-block;
     margin: 30px 0 0 30px;
 }
