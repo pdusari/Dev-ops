@@ -44,7 +44,26 @@ span.psw {
 .Hidden{
     display: none;
 }
+.dev-ops-teams{
+overflow-x:hidden;
+white-space:nowrap;
+min-height:200px;
+width: 100%;
+}
 
+.dev-ops-teams li{
+display:inline;
+float:left;
+padding: 5px 20px;
+}
+.dev-ops-teams img{
+display:inline;
+}
+
+.img-circle {
+    border-radius: 50%;
+    max-height: 150px;
+}
 </style>
 </head>
 
@@ -73,7 +92,7 @@ span.psw {
                 <a class="nav-link" href="mailto:usicandedevops@deloitte.com">CONTACT US</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Teams</a>
+                <a class="nav-link" href="#"  data-toggle="modal"  data-target="#TeamsModal">TEAMS</a>
             </li>
             <li class="nav-item">
                 <button type="button" class="btn btn-success login-btnAction" data-toggle="modal"  data-target="#id01">LOGIN</button>
