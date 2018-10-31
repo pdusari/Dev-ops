@@ -88,7 +88,7 @@ function makeid() {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
     loginId = text;
-    $.cookie(document.getElementById("uname").value, text,{ expires: 1 });
+    $.cookie('isloggedin', text,{ expires: 1 });
     var email={"emailto":document.getElementById("uname").value,"message":"Dear,<br> Please find the Token for Dev-ops portal:"+text+"<br>Regards,<br>Support Team"}
     $.ajax({
          type: "POST",
@@ -109,13 +109,22 @@ ShoWHideDiv();
 }
 function validateToken(){
   var Token=document.getElementById("upsw").value
-  var Cookiestored=$.cookie(document.getElementById("uname").value)
+  var Cookiestored=$.cookie('isloggedin')
   if(Cookiestored==Token){
     $('#id01').modal('hide');
+    $('.ml-auto li:last').hide()
   }else{
     alert("Invalid Cookie")
   }
 }
+function validateTokenExits(){
+var Cookiestored=$.cookie('isloggedin')
+if(Cookiestored){
+  $('#id01').modal('hide');
+  $('.ml-auto li:last').hide()
+}
+}
+validateTokenExits()
 function ShoWHideDiv() {
     var element = document.getElementById("emailDiv");
     element.classList.add("Hidden");
