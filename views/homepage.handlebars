@@ -238,7 +238,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    Thank you for collaborating with us. 
+                    Thank you for collaborating with us.
                     Please fill a small survey by clicking the button below and our team will get in touch with you.
                   </div>
                   <div class="modal-footer">
@@ -247,5 +247,48 @@
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div class="modal"  id="id01"  role="dialog" data-backdrop=false aria-labelledby="exampleModalLabel" aria-hidden="true" >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body modal-login">
+                    <div id="emailDiv">
+                      <label for="uname"><b>Username</b></label>
+                      <input class="inpt-loginclass" type="email" placeholder="Enter Username" name="uname" required>
+                      <button class="login-button" type="button" onclick="validateForm();">Generate Token</button>
+                    </div>
+                    <div id="tokenDiv" class="Hidden">
+                  <label for="psw"><b>Token</b></label>
+                  <input class="inpt-loginclass" type="text" placeholder="Enter Token" name="psw">
+                    <button class="login-button" type="submit" onclick="SendEmail">Login</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <form class="modal-content animate" action="/action_page.php" name="login">
+                <div class="imgcontainer" style="background: black;">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <img src="deloitte_Resources.png" alt="deloitte" style="width: 40%;">
+                </div>
+
+                <div class="container">
+                    <div id="emailDiv">
+                      <label for="uname"><b>Username</b></label>
+                      <input type="email" placeholder="Enter Username" name="uname" required>
+                      <button type="button" onclick="validateForm();">Generate Token</button>
+                    </div>
+                    <div id="tokenDiv" class="Hidden">
+                  <label for="psw"><b>Token</b></label>
+                  <input type="text" placeholder="Enter Token" name="psw">
+                    <button type="submit" onclick="SendEmail">Login</button>
+                    </div>
+              </form> -->
             </div>
     </div>

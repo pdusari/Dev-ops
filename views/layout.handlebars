@@ -12,6 +12,37 @@
   <link rel="stylesheet" href="/styles/homepage.css">
 <link rel="stylesheet" href="/styles/common.css">
 <link rel="stylesheet" href="/styles/projectpage.css">
+<style>
+.modal-login {
+  background-color: #fefefe;
+  margin: 0% auto 5% auto; /* 5% from the top, 15% from the bottom and centered */
+  width: 100%;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+.inpt-loginclass{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+</style>
 </head>
 
 <body>
@@ -36,10 +67,13 @@
                 <a class="nav-link"  href="/#Toolsused">TOOLS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/#contactus">CONTACT US</a>
+                <a class="nav-link" href="mailto:usicandedevops@deloitte.com">CONTACT US</a>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn btn-success">LOGIN</button>
+                <a class="nav-link" href="#">Teams</a>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-success login-btnAction" data-toggle="modal"  data-target="#id01">LOGIN</button>
             </li>
 
         </ul>
