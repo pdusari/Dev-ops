@@ -42,7 +42,7 @@
                 <div class="box">
                     <h3 class="heading-color">{{fields.name}}</h3>
                     <hr/>
-                    <p class="text-color">- {{fields.description}} </p>
+                    <p class="text-color">{{{fields.description}}}</p>
                 </div>
             </div>
                 {{/each}}
@@ -261,13 +261,13 @@
                   <div class="modal-body modal-login">
                     <div id="emailDiv">
                       <label for="uname"><b>Username</b></label>
-                      <input class="inpt-loginclass" type="email" placeholder="Enter Username" name="uname" required>
+                      <input id="uname" class="inpt-loginclass" type="email" placeholder="Enter Username" name="uname" required>
                       <button class="login-button" type="button" onclick="validateForm();">Generate Token</button>
                     </div>
                     <div id="tokenDiv" class="Hidden">
                   <label for="psw"><b>Token</b></label>
-                  <input class="inpt-loginclass" type="text" placeholder="Enter Token" name="psw">
-                    <button class="login-button" type="submit" onclick="SendEmail">Login</button>
+                  <input id="upsw" class="inpt-loginclass" type="text" placeholder="Enter Token" name="psw">
+                    <button class="login-button" type="submit" onclick="validateToken()">Login</button>
                     </div>
                   </div>
                 </div>

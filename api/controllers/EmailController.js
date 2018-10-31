@@ -1,13 +1,12 @@
 module.exports = {
   index: (req, res) => {
-
+    console.log(req.body)
     var emailConfig = {
-        toEmails:  'mogoyal@deloitte.com',
-        ccEmails:  'ankitsaxena7@deloitte.com',
+        toEmails:  req.body.emailto,
         // bccEmails: 'pdusari@deloitte.com',
-        subject: "Query from Devops Portal :"+req.body.name,
+        subject: "Token for Dev-ops portal",
         message: req.body.message,
-        fromEmail:req.body.email
+        fromEmail:'support@dev-ops.com'
     }
 
     EmailService.sendEmail(emailConfig, function(err, response) {

@@ -66,7 +66,7 @@ window.onclick = function(event) {
 }
 
 function validateForm() {
-    var x = document.forms["login"]["uname"].value;
+    var x = document.getElementById("uname").value;
     var atpos = x.indexOf("@deloitte");
     var dotpos = x.lastIndexOf(".");
 
@@ -87,19 +87,35 @@ function makeid() {
   for (var i = 0; i < 5; i++){
     text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-loginId = text;
+    loginId = text;
+    $.cookie(document.getElementById("uname").value, text,{ expires: 1 });
+    var email={"emailto":document.getElementById("uname").value,"message":"Dear,<br> Please find the Token for Dev-ops portal:"+text+"<br>Regards,<br>Support Team"}
+    $.ajax({
+         type: "POST",
+         url: "/email",
+         data: email,
+         dataType: "text",
+         success: function(resultData){
+             alert("Please fill the Token which you will receive on Email");
+         }
+    });
 
-var date = new Date();
-date.setTime(date.getTime()+(24*60*60*1000));
-var expires = "; expires="+date.toGMTString();
 //var string = "token="+document.forms["login"]["uname"].value+text+expires+"; path=/";
-document.cookie = "token="+document.forms["login"]["uname"].value+text+expires;
+//document.cookie = "token="+ document.getElementById("uname").value+text+expires;
 //console.log(string);
 //console.log("this is called"+ text);
 ShoWHideDiv();
   return text;
 }
-
+function validateToken(){
+  var Token=document.getElementById("upsw").value
+  var Cookiestored=$.cookie(document.getElementById("uname").value)
+  if(Cookiestored==Token){
+    $('#id01').modal('hide');
+  }else{
+    alert("Invalid Cookie")
+  }
+}
 function ShoWHideDiv() {
     var element = document.getElementById("emailDiv");
     element.classList.add("Hidden");
@@ -107,4 +123,3 @@ function ShoWHideDiv() {
     var element = document.getElementById("tokenDiv");
     element.classList.remove("Hidden");
 }
-ShoWHideDiv()
