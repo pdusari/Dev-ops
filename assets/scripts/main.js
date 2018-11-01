@@ -88,7 +88,7 @@ function makeid() {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
     loginId = text;
-    $.cookie('isloggedin', text,{ expires: 1 });
+    $.cookie('isloggedin', text,{ expires: 1, path: '/' });
     var email={"emailto":document.getElementById("uname").value,"message":"Dear,<br><br> Please find the Token for Dev-ops portal:"+text+"<br><br><br>Regards,<br>Support Team"}
     $.ajax({
          type: "POST",
