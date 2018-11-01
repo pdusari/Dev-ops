@@ -89,7 +89,7 @@ function makeid() {
     }
     loginId = text;
     $.cookie('isloggedin', text,{ expires: 1 });
-    var email={"emailto":document.getElementById("uname").value,"message":"Dear,<br> Please find the Token for Dev-ops portal:"+text+"<br>Regards,<br>Support Team"}
+    var email={"emailto":document.getElementById("uname").value,"message":"Dear,<br><br> Please find the Token for Dev-ops portal:"+text+"<br><br><br>Regards,<br>Support Team"}
     $.ajax({
          type: "POST",
          url: "/email",
@@ -122,6 +122,9 @@ var Cookiestored=$.cookie('isloggedin')
 if(Cookiestored){
   $('#id01').modal('hide');
   $('.ml-auto li:last').hide()
+}else{
+  $('#id01').modal('show');
+  $('.ml-auto li:last').show()
 }
 }
 validateTokenExits()
