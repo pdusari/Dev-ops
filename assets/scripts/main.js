@@ -23,8 +23,11 @@ $(document).ready(function() {
 
   function projectdetails() {
     $('.div-one').show();
+    $('.showSingle').css('opacity', '0.5');
+    $('.showSingle:eq(0)').css('opacity', '1');
     $('.showSingle').click(function() {
-
+      $('.showSingle').css('opacity', '0.5');
+      $(this).css('opacity', '1');
       $('.targetDiv').hide();
       $('#div' + $(this).attr('target')).show();
 
