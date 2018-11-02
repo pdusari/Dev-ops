@@ -10,9 +10,10 @@ module.exports = {
         var resultset = JsonService.mergeProjectsArrays(data.items, data.includes.Asset);
       }
       //var resultset=JsonService.mergeProjectsArrays(data.items,data.includes.Asset);
-    //  console.log("data",resultset);
+     //console.log("data",data.includes.Entry[0].fields);
       res.view('project', {
         content: resultset,
+        industry:data.includes.Entry[0].fields,
         LOGO: '../images/navlogo.png'
       });
 
