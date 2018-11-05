@@ -6,7 +6,10 @@ $(document).ready(function() {
   // if($('#industryId')){
   //   $('#industryId').val(id);
   // }
-
+  $("#id01").modal({
+         show: false,
+         backdrop: 'static'
+     });
   $('#sendEmail').click(function() {
     var data = $('form[name="contactUS"').serialize();
     $.ajax({
@@ -62,11 +65,11 @@ $('#Searchprojects').on('click', function(e) {
 var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
 
 function validateForm() {
     var x = document.getElementById("uname").value;
@@ -128,8 +131,10 @@ if(Cookiestored){
 }else{
   $('#id01').modal('show');
   $('.ml-auto li:last').show()
+
 }
 }
+
 validateTokenExits()
 function ShoWHideDiv() {
     var element = document.getElementById("emailDiv");
