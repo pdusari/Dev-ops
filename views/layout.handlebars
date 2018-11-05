@@ -64,6 +64,13 @@ display:inline;
     border-radius: 50%;
     max-height: 150px;
 }
+.blur-filter {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
 </style>
 </head>
 
@@ -95,7 +102,7 @@ display:inline;
                 <a class="nav-link" href="#"  data-toggle="modal"  data-target="#TeamsModal">TEAMS</a>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn btn-success login-btnAction" data-toggle="modal"  data-target="#id01">LOGIN</button>
+                <button type="button" id="loginButton" class="btn btn-success login-btnAction" data-toggle="modal"  data-target="#">LOGIN</button>
             </li>
 
         </ul>
@@ -155,14 +162,14 @@ display:inline;
             </div>
           </div>
         </div>
-        <div class="modal"  id="id01"  role="dialog" data-backdrop=false aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal"  id="id01"  role="dialog" data-backdrop="true" aria-labelledby="LoginModalLabel" data-keyboard="false" aria-hidden="true" >
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                </button> -->
               </div>
               <div class="modal-body modal-login">
                 <div id="emailDiv">
