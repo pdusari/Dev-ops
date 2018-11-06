@@ -2,8 +2,9 @@ module.exports = {
   view: (req, res) => {
 
     var spaceid = req.param('industryID');
+    console.log(spaceid);
     ContentService.getProjectData(spaceid, function(err, data) {
-
+      console.log(data)
       if (data.items.length == 0) {
         var resultset = null;
       } else {
